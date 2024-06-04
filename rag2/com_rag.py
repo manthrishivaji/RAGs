@@ -36,19 +36,18 @@ def process_pdf(pdf_file):
                 length_function = len
             )
     docs = text_splitter.split_text(text=text)
-
-    print("embedd now")
+    
     # Embedding
     embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-base-en-v1.5")
-    print("llm now")
+    
     #llm
     llm=HuggingFaceEndpoint(repo_id="mistralai/Mistral-7B-Instruct-v0.2", temperature=0.1, max_length=512)
-    print("hyde now")
+    
     #hyde
     hyde_embeddings = HypotheticalDocumentEmbedder.from_llm(llm,
                                                     embeddings,
                                                     prompt_key = "web_search")
-    print("vectorstore now")
+    
     #vectorstore
     vectorstore = Chroma.from_texts(texts=docs,
                                     collection_name='collection-1',
@@ -67,6 +66,7 @@ def process_pdf(pdf_file):
 
     def format_docs(pdf_reader):
         return "\n\n".join(doc.page_content for doc in pdf_reader)
+        
     #chain
     global rag_chain
     rag_chain = (
