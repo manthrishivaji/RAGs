@@ -1,0 +1,9 @@
+PyPDF2
+langchain
+langchain_community
+gradio
+tensorflow
+langchain-community==0.2.1 
+langchain-core==0.2.1
+sentence-transformers
+chromadb
