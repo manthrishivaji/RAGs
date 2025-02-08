@@ -16,7 +16,7 @@ This project implements a Retrieval-Augmented Generation (RAG) system using Lang
     ``bash
     pip install -r requirements.txt
 3. Create a .env file and add your Hugging Face API token:
-    HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_token_here
+    HUGGINGFACE_HUB_TOKEN="your_huggingface_token_here"
 4. Run the application:
     python app.py
 
