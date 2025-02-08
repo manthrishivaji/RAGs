@@ -1,0 +1,10 @@
+# requirements.txt
+PyPDF2
+langchain
+huggingfacehub
+langchain-community
+langchain-huggingface
+langchain-core
+gradio
+python-dotenv
+pandas
